@@ -1,0 +1,84 @@
+pageInfo:
+  title: The MadLab
+  description: a dashboard for madlab applications
+  navLinks:
+    - title: GitHub
+      path: https://github.com/legendairy75
+
+appConfig:
+  statusCheck: true
+  statusCheckAllowInsecure: true
+  workspaceLandingUrl: https://cloud.ron-gibson.com/
+
+sections: # An array of sections
+- name: Admin
+  items:
+  - title: Netgear
+    icon: fas fa-network-wired
+    url: http://192.168.1.1/
+  - title: Zavala
+    icon: hl-cockpit
+    url: http://zavala.home/
+    statusCheckAllowInsecure: true
+  - title: Pi-hole
+    icon: hl-pihole
+    url: https://pihole.home/admin
+    statusCheckAllowInsecure: true
+  - title: Kuma
+    icon: hl-uptimekuma
+    url: http://kuma.home/
+  - title: Grafana
+    icon: hi-grafana
+    url: http://grafana.home
+  - title: Portainer
+    icon: hl-ortainer
+    url: http://port.home/
+    statusCheckAllowInsecure: true
+  - title: Nginx
+    icon: hl-nginx
+    url: http://nginx.home/
+- name: User
+  items:
+  - title: Wiki
+    icon: generative
+    url: http://wiki.zavala.home/
+  - title: Whoogle
+    icon: generative
+    url: http://whoogle.home/
+  - title: next cloud
+    icon: hl-nextcloud
+    url: https://cloud.ron-gibson.com
+    workspaceLandingUrl: https://cloud.ron-gibson.com/
+  - title: Gitea
+    icon: hl-gitea
+    url: https://git.ron-gibson.com
+  - title: jellyfin
+    icon: hl-jellyfin
+    url: http://jellyfin.home/
+  - title: FreshRSS
+    icon: hl-freshrss
+    url: http://freshrss.home/
+  - title: Linkwarden
+    icon: hl-linkwarden
+    url: http://linkwarden.home
+  - title: calibre-web
+    icon: hl-calibre
+    url: http://web.calibre.home
+- name: Widgets       
+  widgets:
+  - type: clock
+    options:
+      timeZone: America/Chicago
+      format: en-US
+      hideDate: false
+        #- type: nextcloud-user
+    #useProxy: true
+      #options:
+      #hostname: https://cloud.ron-gibson.com
+        #username: legendairy
+        #      password: 8LzW8-YgGx6-cpSCA-LCk55-32HCH
+  - type: uptime-kuma
+    useProxy: true
+    options:
+      apiKey: uk1_FasoiI8DgPz7hK9Eaoge-RkRlxgAjDXJBrC_Vcrh
+      url: http://kuma.home/metrics
